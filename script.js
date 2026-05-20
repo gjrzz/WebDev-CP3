@@ -82,6 +82,61 @@ function editarItem(indice) {
   renderizarLista();
 }
 
+// RENDERIZAÇÃO
+function renderizarLista() {
+  var ul = document.getElementById("game-list");
+  var counter = document.getElementById("counter");
+
+  ul.innerHTML = "";
+
+  counter.textContent = lista.length + (lista.length === 1 ? " jogo" : " jogos");
+
+  for (var i = 0; i < lista.length; i++) {
+    var li = criarItemLista(i);
+    ul.appendChild(li);
+  }
+}
+
+function criarItemLista(indice) {
+  var li = document.createElement("li");
+  li.classList.add("game-item");
+
+  var numSpan = document.createElement("span");
+  numSpan.classList.add("item-num");
+  numSpan.textContent = String(indice + 1).padStart(2, "0");
+
+  var nomeSpan = document.createElement("span");
+  nomeSpan.classList.add("item-nome");
+  nomeSpan.textContent = lista[indice];
+
+  var acoes = document.createElement("div");
+  acoes.classList.add("item-acoes");
+
+  var btnEditar = document.createElement("button");
+  btnEditar.classList.add("btn-editar");
+  btnEditar.textContent = "Editar";
+  btnEditar.setAttribute("data-index", indice);
+  btnEditar.onclick = function() {
+    editarItem(parseInt(this.getAttribute("data-index")));
+  };
+
+  var btnRemover = document.createElement("button");
+  btnRemover.classList.add("btn-remover");
+  btnRemover.textContent = "✕";
+  btnRemover.setAttribute("data-index", indice);
+  btnRemover.onclick = function() {
+    removerItem(parseInt(this.getAttribute("data-index")));
+  };
+
+  acoes.appendChild(btnEditar);
+  acoes.appendChild(btnRemover);
+  li.appendChild(numSpan);
+  li.appendChild(nomeSpan);
+  li.appendChild(acoes);
+
+  return li;
+}
+
 // UTILITÁRIOS
 function mostrarErro(el, mensagem) {
   el.textContent = mensagem;
