@@ -64,6 +64,24 @@ function adicionarAoInicio() {
   renderizarLista();
 }
 
+// REMOVER
+function removerItem(indice) {
+  lista.splice(indice, 1);
+  renderizarLista();
+}
+
+// EDITAR
+function editarItem(indice) {
+  var novoValor = prompt("Editar jogo:", lista[indice]);
+
+  if (novoValor === null || novoValor.trim() === "") {
+    return;
+  }
+
+  lista[indice] = novoValor.trim();
+  renderizarLista();
+}
+
 // UTILITÁRIOS
 function mostrarErro(el, mensagem) {
   el.textContent = mensagem;
