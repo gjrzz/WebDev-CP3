@@ -26,7 +26,7 @@ Criação de uma aplicação web de CRUD com login, usando HTML, CSS e JavaScrip
 
 O prompt acima foi mantido, mas adicionei ao final:
 
-> Separe o código em três arquivos: `index.html`, `style.css` e `script.js`. No JavaScript, use `var` e `for` clássico (sem `const`, `let` ou `forEach`), já que esses são os recursos trabalhados em aula.
+> Separe o código em três arquivos: `index.html`, `style.css` e `script.js`. No JavaScript, use `var` e `for` clássico.
 
 ---
 
@@ -35,7 +35,7 @@ O prompt acima foi mantido, mas adicionei ao final:
 ### 1. ChatGPT (OpenAI — GPT-4o)
 
 **Problemas encontrados:**
-- Usou `const` e `let` em todo o código JavaScript, que são recursos ainda não abordados nas aulas da disciplina.
+- Usou `const` e `let` em todo o código JavaScript, que são recursos que eu deixei claro que não queria usar.
 - Utilizou `forEach` e arrow functions (`=>`), que também fogem do conteúdo visto em aula.
 - A estilização CSS ficou muito simples e genérica (fundo branco, fonte Arial), sem nenhuma preocupação visual.
 - A remoção de itens foi feita pelo valor (`indexOf`), o que causaria bug ao remover itens com texto duplicado.
