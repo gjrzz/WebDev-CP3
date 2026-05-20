@@ -137,6 +137,28 @@ function criarItemLista(indice) {
   return li;
 }
 
+// EVENTOS DE TECLADO
+document.getElementById("username").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    handleLogin();
+  }
+});
+
+document.getElementById("password").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    handleLogin();
+  }
+});
+
+document.getElementById("new-item").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    adicionarAoFinal();
+  }
+});
+
+// INICIALIZAÇÃO
+renderizarLista();
+
 // UTILITÁRIOS
 function mostrarErro(el, mensagem) {
   el.textContent = mensagem;
