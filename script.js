@@ -33,6 +33,37 @@ function handleLogout() {
   esconderErro(document.getElementById("login-error"));
 }
 
+// ADICIONAR
+function adicionarAoFinal() {
+  var valor = document.getElementById("new-item").value.trim();
+  var erroEl = document.getElementById("add-error");
+
+  if (valor === "") {
+    mostrarErro(erroEl, "⚠ O campo não pode estar vazio.");
+    return;
+  }
+
+  esconderErro(erroEl);
+  lista.push(valor);
+  document.getElementById("new-item").value = "";
+  renderizarLista();
+}
+
+function adicionarAoInicio() {
+  var valor = document.getElementById("new-item").value.trim();
+  var erroEl = document.getElementById("add-error");
+
+  if (valor === "") {
+    mostrarErro(erroEl, "⚠ O campo não pode estar vazio.");
+    return;
+  }
+
+  esconderErro(erroEl);
+  lista.unshift(valor);
+  document.getElementById("new-item").value = "";
+  renderizarLista();
+}
+
 // UTILITÁRIOS
 function mostrarErro(el, mensagem) {
   el.textContent = mensagem;
