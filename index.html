@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault — Minha Lista de Jogos</title>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="login-screen">
+    <div class="login-card">
+      <h1>GameVault</h1>
+      <p>Sua coleção. Seu domínio.</p>
+
+      <label for="username">Usuário</label>
+      <input type="text" id="username" placeholder="Digite seu usuário" autocomplete="off" />
+
+      <label for="password">Senha</label>
+      <input type="password" id="password" placeholder="Digite sua senha" />
+
+      <div id="login-error"></div>
+
+      <button id="login-btn" onclick="handleLogin()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- APP -->
+  <div id="app-screen">
+    <header>
+      <span>GameVault</span>
+      <button onclick="handleLogout()">Sair</button>
+    </header>
+
+    <main>
+      <section class="add-section">
+        <h2>Adicionar Jogo</h2>
+        <input type="text" id="new-item" placeholder="Nome do jogo..." />
+        <button onclick="adicionarAoFinal()">+ Final</button>
+        <button onclick="adicionarAoInicio()">+ Início</button>
+        <div id="add-error"></div>
+      </section>
+
+      <section class="list-section">
+        <h2>Minha Coleção</h2>
+        <span id="counter"></span>
+        <ul id="game-list"></ul>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
