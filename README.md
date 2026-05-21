@@ -47,7 +47,7 @@ cd seu-repositorio
 
 ## 🤖 Uso de IA
 
-Três IAs foram consultadas durante o desenvolvimento: ChatGPT, Gemini e Claude. O processo de consulta, os prompts utilizados e a justificativa da escolha estão documentados no arquivo [`prompts.md`](./prompt.md).
+Três IAs foram consultadas durante o desenvolvimento: ChatGPT, Gemini e Claude. O processo de consulta, os prompts utilizados e a justificativa da escolha estão documentados no arquivo [`prompts.md`](./prompts.md).
 
 ---
 
